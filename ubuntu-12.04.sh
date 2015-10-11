@@ -21,3 +21,4 @@ mkdir -p /etc/vncserver
 cd /etc/vncserver/
 wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/vncservers.conf
 update-rc.d vncserver defaults 99
+reboot
