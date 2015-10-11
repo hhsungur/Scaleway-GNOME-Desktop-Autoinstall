@@ -12,13 +12,13 @@ apt-get --yes update
 
 cd
 apt-get --yes install vnc4server
-vncserver :$PORT
+vncserver :$port
 
 apt-get --yes install firefox chromium-browser
 apt-get --yes install xfce4
 apt-get --yes install gnome-core
 
-cd /root/.vnc/
+cd ~/.vnc/
 mv xstartup xstartup.bak
 wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/xstartup --no-check-certificate
 chmod +x xstartup
@@ -31,6 +31,6 @@ mkdir -p /etc/vncserver
 cd /etc/vncserver/
 touch vncservers.conf
 echo 'VNCSERVERS="'$PORT':root"' | tee -a /etc/vncserver/vncservers.conf
-echo 'VNCSERVERARGS['$PORT']="-geometry '$RESOLUTION'"' | tee -a /etc/vncserver/vncservers.conf
+echo 'VNCSERVERARGS[1]="-geometry '$RESOLUTION'"' | tee -a /etc/vncserver/vncservers.conf
 update-rc.d vncserver defaults 99
 reboot
