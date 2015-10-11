@@ -11,4 +11,12 @@ vncserver
 vncserver -kill :1
 cd ~/.vnc/
 mv xstartup xstartup.bak
-wget 
+wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/xstartup --no-check-certificate
+chmod +x xstartup
+cd /etc/init.d/
+wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/vncserver --no-check-certificate
+chmod +x vncserver
+mkdir -p /etc/vncserver
+cd /etc/vncserver/
+wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/vncservers.conf
+update-rc.d vncserver defaults 99
