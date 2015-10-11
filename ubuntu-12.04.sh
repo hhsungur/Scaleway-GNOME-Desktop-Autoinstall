@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
 read -p "Port: " -e -i 1 PORT
 read -p "Rosolution: " -e -i 1280x720 RESOLUTION
 
