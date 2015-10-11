@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt-get --yes install firefox chromium-browser
 apt-get --yes install xfce4
 apt-get --yes install gnome-core
