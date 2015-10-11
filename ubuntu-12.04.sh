@@ -6,7 +6,7 @@ read -p "Rosolution: " -e -i 1280x720 RESOLUTION
 apt-get --yes update
 
 cd
-wget http://launchpadlibrarian.net/128479899/vnc4server_4.1.1%2Bxorg4.3.0-37ubuntu5_armhf.deb  //vnc4server for armhf based system
+wget http://launchpadlibrarian.net/128479899/vnc4server_4.1.1%2Bxorg4.3.0-37ubuntu5_armhf.deb
 dpkg -i vnc4server_*.deb
 apt-get --yes -f install
 dpkg -i vnc4server_*.deb
