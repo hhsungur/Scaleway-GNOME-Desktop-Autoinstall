@@ -10,7 +10,6 @@ apt-get --yes -f install
 dpkg -i vnc4server_*.deb
 rm vnc4server_*.deb
 vncserver
-vncserver -kill :1
 cd ~/.vnc/
 mv xstartup xstartup.bak
 wget https://raw.githubusercontent.com/hhsungur/gnome-desktop-autoinstall/master/xstartup --no-check-certificate
