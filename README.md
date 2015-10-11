@@ -1,4 +1,4 @@
-Only Scaleway C1 servers.
+Only Scaleway C1 servers and only root user.
 
 https://www.scaleway.com/
 
