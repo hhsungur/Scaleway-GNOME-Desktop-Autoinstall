@@ -7,6 +7,7 @@ fi
 
 read -p "Port: " -e -i 1 PORT
 read -p "Rosolution: " -e -i 1280x720 RESOLUTION
+read -p "Password: " -e PASS
 
 apt-get --yes update
 
@@ -16,7 +17,7 @@ dpkg -i vnc4server_*.deb
 apt-get --yes -f install
 dpkg -i vnc4server_*.deb
 rm vnc4server_*.deb
-vncserver :$PORT
+echo -e "$PASS\\n$PASS" | vncserver :$PORT
 
 apt-get --yes install firefox chromium-browser
 apt-get --yes install xfce4
