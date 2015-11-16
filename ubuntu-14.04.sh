@@ -7,12 +7,13 @@ fi
 
 read -p "Port: " -e -i 1 PORT
 read -p "Rosolution: " -e -i 1280x720 RESOLUTION
+read -p "Password: " -e PASS
 
 apt-get --yes update
 
 cd
 apt-get --yes install vnc4server
-vncserver :$PORT
+echo -e "$PASS\\n$PASS" | vncserver :$PORT
 
 apt-get --yes install firefox chromium-browser
 apt-get --yes install xfce4
