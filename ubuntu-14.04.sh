@@ -11,13 +11,13 @@ read -p "Password: " -e PASS
 
 apt-get --yes update
 
-cd
-apt-get --yes install vnc4server
-echo -e "$PASS\\n$PASS" | vncserver :$PORT
-
 apt-get --yes install firefox chromium-browser
 apt-get --yes install xfce4
 apt-get --yes install gnome-core
+
+cd
+apt-get --yes install vnc4server
+echo -e "$PASS\\n$PASS" | vncserver :$PORT
 
 cd /root/.vnc/
 mv xstartup xstartup.bak
